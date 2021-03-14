@@ -12,7 +12,7 @@ pipeline {
       stage('Code Checkout') {
          steps {
             // Get some code from a GitHub repository
-            git branch: 'main', url: 'https://github.com/drvdevops2805/drv_multibranchPipejob_class9rev_repo.git'   
+            git branch: 'feature/dhruv1', url: 'https://github.com/drvdevops2805/drv_multibranchPipejob_class9rev_repo.git'   
          }
 
       }
