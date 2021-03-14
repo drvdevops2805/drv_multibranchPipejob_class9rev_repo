@@ -8,7 +8,14 @@ pipeline {
                 
    }
 
- 
+   stages {
+      stage('Code Checkout') {
+         steps {
+            // Get some code from a GitHub repository
+            git branch: 'main', url: 'https://github.com/drvdevops2805/drv_multibranchPipejob_class9rev_repo.git'   
+         }
+
+      }
       
       
       stage('Code Testing') {
