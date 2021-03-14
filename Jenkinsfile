@@ -8,14 +8,7 @@ pipeline {
                 
    }
 
-   stages {
-      stage('Code Checkout') {
-         steps {
-            // Get some code from a GitHub repository
-            git branch: 'main', url: 'https://github.com/drvdevops2805/drv_multibranchPipejob_class9rev_repo.git'   
-         }
-
-      }
+ 
       
       
       stage('Code Testing') {
@@ -26,7 +19,15 @@ pipeline {
          }
       }
          
-      
+      stage('Build') {
+         steps {
+           
+            // To run Maven on a Windows agent, use
+           bat "mvn package"
+         }
+
+      }
+ 
       
       stage('Code Deploy') {
          steps {
